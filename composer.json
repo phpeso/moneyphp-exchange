@@ -1,0 +1,15 @@
+{
+    "name": "peso/moneyphp",
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Peso\\MoneyPHP\\": "src"
+        }
+    },
+    "require": {
+        "moneyphp/money": "^4.7",
+        "peso/core": "dev-master"
+    }
+}
