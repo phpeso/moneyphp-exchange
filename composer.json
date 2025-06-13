@@ -1,5 +1,5 @@
 {
-    "name": "peso/moneyphp",
+    "name": "peso/moneyphp-exchange",
     "config": {
         "sort-packages": true
     },
@@ -9,7 +9,7 @@
         }
     },
     "require": {
-        "moneyphp/money": "^4.7",
-        "peso/core": "dev-master"
+        "moneyphp/money": "^4.1",
+        "peso/core": "^0.1"
     }
 }
