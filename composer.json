@@ -9,6 +9,7 @@
         }
     },
     "require": {
+        "php": "^8.2",
         "moneyphp/money": "^4.1",
         "peso/core": "^0.1"
     }
