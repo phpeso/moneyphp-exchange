@@ -1,6 +1,6 @@
 <?php
 
-namespace Peso\MoneyPHP;
+namespace Peso\Money;
 
 use Money\Currency;
 use Money\CurrencyPair;

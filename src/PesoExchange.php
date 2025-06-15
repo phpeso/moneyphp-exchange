@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Peso\MoneyPHP;
+namespace Peso\Money;
 
 use Money\Currency;
 use Peso\Core\Requests\CurrentExchangeRateRequest;

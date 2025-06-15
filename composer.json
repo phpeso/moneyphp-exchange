@@ -5,7 +5,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Peso\\MoneyPHP\\": "src"
+            "Peso\\Money\\": "src"
         }
     },
     "require": {
