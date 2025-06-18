@@ -11,7 +11,7 @@
 [Packagist Link]: https://packagist.org/packages/peso/moneyphp-exchange
 [License Link]: LICENSE.md
 
-This is a library that provides xchange class for Money for PHP based on Peso for PHP.
+This is a library that provides an Exchange class for Money for PHP based on Peso for PHP.
 
 ## Installation
 
