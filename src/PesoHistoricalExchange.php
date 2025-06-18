@@ -6,6 +6,7 @@ namespace Peso\Money;
 
 use Arokettu\Date\Date;
 use Money\Currency;
+use Override;
 use Peso\Core\Requests\HistoricalExchangeRateRequest;
 use Peso\Core\Services\ExchangeRateServiceInterface;
 
@@ -18,11 +19,12 @@ final readonly class PesoHistoricalExchange extends AbstractExchange
         parent::__construct($service);
     }
 
-    public function withDate(Date $date): void
+    public function withDate(Date $date): self
     {
-        new self($this->service, $date);
+        return new self($this->service, $date);
     }
 
+    #[Override]
     protected function createRequest(Currency $baseCurrency, Currency $counterCurrency): object
     {
         return new HistoricalExchangeRateRequest($baseCurrency->getCode(), $counterCurrency->getCode(), $this->date);
