@@ -47,7 +47,7 @@ Read the full documentation here: <https://phpeso.org/v0.x/integrations/moneyphp
 
 ## Support
 
-Please file issues on our main repo at GitHub: <https://github.com/peso/moneyphp-exchange/issues>
+Please file issues on our main repo at GitHub: <https://github.com/phpeso/moneyphp-exchange/issues>
 
 ## License
 
