@@ -24,6 +24,11 @@ abstract readonly class AbstractExchange implements Exchange
     #[Override]
     public function quote(Currency $baseCurrency, Currency $counterCurrency): CurrencyPair
     {
+        // obvious optimization
+        if ($baseCurrency->getCode() === $counterCurrency->getCode()) {
+            return new CurrencyPair($baseCurrency, $counterCurrency, '1');
+        }
+
         $request = $this->createRequest($baseCurrency, $counterCurrency);
         $response = $this->service->send($request);
 
