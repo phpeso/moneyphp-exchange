@@ -2,6 +2,12 @@
 
 ## Pre-release
 
+### 0.9.1
+
+*Jun 20, 2025*
+
+* peso/core v0.10 is allowed
+
 ### 0.9.0 "Beta 1"
 
 *Jun 19, 2025*
