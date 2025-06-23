@@ -1,4 +1,4 @@
-# Peso Exchanger for Money
+# Peso Exchange for Money
 
 [![Packagist]][Packagist Link]
 [![PHP]][Packagist Link]
