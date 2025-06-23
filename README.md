@@ -1,4 +1,4 @@
-# Peso Exchange for Money
+# Peso-based Exchange class for Money
 
 [![Packagist]][Packagist Link]
 [![PHP]][Packagist Link]
