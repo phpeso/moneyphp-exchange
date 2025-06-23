@@ -17,6 +17,8 @@
 
 ### 0.1.0 "Alpha 1"
 
+(untagged; 06fd68295a6cb2ed63cc6386c9d8dc1d9b69477e)
+
 *June 13, 2025*
 
 First prototype
