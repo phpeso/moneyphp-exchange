@@ -1,4 +1,4 @@
-# Peso for PHP Core Library
+# Peso Exchanger for Money
 
 [![Packagist]][Packagist Link]
 [![PHP]][Packagist Link]
