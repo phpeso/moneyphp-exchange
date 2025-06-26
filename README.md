@@ -43,7 +43,7 @@ var_dump($converter->convert($eur100, new Currency('USD'))); // Money::USD(...)
 
 ## Documentation
 
-Read the full documentation here: <https://phpeso.org/v0.x/integrations/moneyphp-exchange.html>
+Read the full documentation here: <https://phpeso.org/v1.x/integrations/moneyphp-exchange.html>
 
 ## Support
 
