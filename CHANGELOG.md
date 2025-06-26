@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.x
+
+### 1.0.0
+
+*Jun 27, 2025*
+
+* peso/core v1.0 is allowed
+
 ## Pre-release
 
 ### 0.9.1
