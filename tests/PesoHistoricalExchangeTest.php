@@ -14,7 +14,7 @@ use Peso\Core\Services\ArrayService;
 use Peso\Money\PesoHistoricalExchange;
 use PHPUnit\Framework\TestCase;
 
-class PesoHistoricalExchangeTest extends TestCase
+final class PesoHistoricalExchangeTest extends TestCase
 {
     public function testExchange(): void
     {

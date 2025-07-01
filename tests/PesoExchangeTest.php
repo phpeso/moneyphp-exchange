@@ -13,7 +13,7 @@ use Peso\Core\Services\ArrayService;
 use Peso\Money\PesoExchange;
 use PHPUnit\Framework\TestCase;
 
-class PesoExchangeTest extends TestCase
+final class PesoExchangeTest extends TestCase
 {
     public function testExchange(): void
     {
