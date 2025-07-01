@@ -8,12 +8,12 @@ use Arokettu\Date\Date;
 use Money\Currency;
 use Override;
 use Peso\Core\Requests\HistoricalExchangeRateRequest;
-use Peso\Core\Services\ExchangeRateServiceInterface;
+use Peso\Core\Services\PesoServiceInterface;
 
 final readonly class PesoHistoricalExchange extends AbstractExchange
 {
     public function __construct(
-        ExchangeRateServiceInterface $service,
+        PesoServiceInterface $service,
         private Date $date,
     ) {
         parent::__construct($service);

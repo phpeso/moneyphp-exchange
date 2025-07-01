@@ -10,6 +10,7 @@ use Money\Currency;
 use Money\Exception\UnresolvableCurrencyPairException;
 use Money\Money;
 use Peso\Core\Services\ArrayService;
+use Peso\Core\Services\NullService;
 use Peso\Money\PesoExchange;
 use PHPUnit\Framework\TestCase;
 
@@ -48,5 +49,16 @@ final class PesoExchangeTest extends TestCase
         self::expectExceptionMessage('Cannot resolve a currency pair for currencies: EUR/USD');
 
         $converter->convert($eur100, new Currency('USD'));
+    }
+
+    public function testExchangeSame(): void
+    {
+        $exchange = new PesoExchange(new NullService());
+        $converter = new Converter(new ISOCurrencies(), $exchange);
+
+        $eur100 = Money::EUR(10000);
+        $converted = $converter->convert($eur100, new Currency('EUR'));
+
+        self::assertEquals($eur100, $converted);
     }
 }

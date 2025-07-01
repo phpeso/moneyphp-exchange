@@ -10,12 +10,12 @@ use Money\Exception\UnresolvableCurrencyPairException;
 use Money\Exchange;
 use Override;
 use Peso\Core\Responses\ErrorResponse;
-use Peso\Core\Services\ExchangeRateServiceInterface;
+use Peso\Core\Services\PesoServiceInterface;
 
 abstract readonly class AbstractExchange implements Exchange
 {
     public function __construct(
-        protected ExchangeRateServiceInterface $service,
+        protected PesoServiceInterface $service,
     ) {
     }
 

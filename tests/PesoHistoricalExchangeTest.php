@@ -5,12 +5,14 @@ declare(strict_types=1);
 namespace Peso\Money\Tests;
 
 use Arokettu\Date\Calendar;
+use Arokettu\Date\Date;
 use Money\Converter;
 use Money\Currencies\ISOCurrencies;
 use Money\Currency;
 use Money\Exception\UnresolvableCurrencyPairException;
 use Money\Money;
 use Peso\Core\Services\ArrayService;
+use Peso\Core\Services\NullService;
 use Peso\Money\PesoHistoricalExchange;
 use PHPUnit\Framework\TestCase;
 
@@ -68,5 +70,16 @@ final class PesoHistoricalExchangeTest extends TestCase
         self::expectExceptionMessage('Cannot resolve a currency pair for currencies: USD/EUR');
 
         $converter->convert($usd100, new Currency('EUR'));
+    }
+
+    public function testExchangeSame(): void
+    {
+        $exchange = new PesoHistoricalExchange(new NullService(), Date::today());
+        $converter = new Converter(new ISOCurrencies(), $exchange);
+
+        $eur100 = Money::EUR(10000);
+        $converted = $converter->convert($eur100, new Currency('EUR'));
+
+        self::assertEquals($eur100, $converted);
     }
 }
