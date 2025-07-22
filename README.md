@@ -3,12 +3,18 @@
 [![Packagist]][Packagist Link]
 [![PHP]][Packagist Link]
 [![License]][License Link]
+[![GitHub Actions]][GitHub Actions Link]
+[![Codecov]][Codecov Link]
 
 [Packagist]: https://img.shields.io/packagist/v/peso/moneyphp-exchange.svg?style=flat-square
 [PHP]: https://img.shields.io/packagist/php-v/peso/moneyphp-exchange.svg?style=flat-square
 [License]: https://img.shields.io/packagist/l/peso/moneyphp-exchange.svg?style=flat-square
+[GitHub Actions]: https://img.shields.io/github/actions/workflow/status/phpeso/moneyphp-exchange/ci.yml?style=flat-square
+[Codecov]: https://img.shields.io/codecov/c/gh/phpeso/moneyphp-exchange?style=flat-square
 
 [Packagist Link]: https://packagist.org/packages/peso/moneyphp-exchange
+[GitHub Actions Link]: https://github.com/phpeso/moneyphp-exchange/actions
+[Codecov Link]: https://codecov.io/gh/phpeso/moneyphp-exchange
 [License Link]: LICENSE.md
 
 This is a library that provides an Exchange class for the Money for PHP based on the Peso for PHP.
