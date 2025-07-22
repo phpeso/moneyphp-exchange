@@ -23,6 +23,9 @@ abstract readonly class AbstractExchange implements Exchange
 
     abstract protected function createRequest(Currency $baseCurrency, Currency $counterCurrency): object;
 
+    /**
+     * @inheritDoc
+     */
     #[Override]
     public function quote(Currency $baseCurrency, Currency $counterCurrency): CurrencyPair
     {
