@@ -34,7 +34,6 @@
     },
     "require": {
         "php": "^8.2",
-        "arokettu/date": "^2.0",
         "moneyphp/money": "^4.1",
         "peso/core": "^1.1"
     },
