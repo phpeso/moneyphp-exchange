@@ -2,6 +2,10 @@
 
 ## 1.x
 
+### next
+
+* Correctly handle invalid Services that return incorrect response objects
+
 ### 1.0.1
 
 *Jul 1, 2025*

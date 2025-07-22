@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Peso\Money;
 
+use Error;
 use Money\Currency;
 use Money\CurrencyPair;
 use Money\Exception\UnresolvableCurrencyPairException;
 use Money\Exchange;
 use Override;
 use Peso\Core\Responses\ErrorResponse;
+use Peso\Core\Responses\ExchangeRateResponse;
 use Peso\Core\Services\PesoServiceInterface;
 
 abstract readonly class AbstractExchange implements Exchange
@@ -32,10 +34,15 @@ abstract readonly class AbstractExchange implements Exchange
         $request = $this->createRequest($baseCurrency, $counterCurrency);
         $response = $this->service->send($request);
 
+        if ($response instanceof ExchangeRateResponse) {
+            return new CurrencyPair($baseCurrency, $counterCurrency, $response->rate->value);
+        }
         if ($response instanceof ErrorResponse) {
             throw UnresolvableCurrencyPairException::createFromCurrencies($baseCurrency, $counterCurrency);
         }
 
-        return new CurrencyPair($baseCurrency, $counterCurrency, $response->rate->value);
+        throw new Error(
+            'Broken Service object: the response must be an instance of ExchangeRateResponse|ErrorResponse',
+        );
     }
 }
