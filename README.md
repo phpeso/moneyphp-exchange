@@ -34,17 +34,23 @@ use Money\Converter;
 use Money\Currencies\ISOCurrencies;
 use Money\Currency;
 use Money\Money;
+use Peso\Money\PesoConverter;
 use Peso\Money\PesoExchange;
 use Peso\Services\EuropeanCentralBankService;
 
-require __DIR__ . '/vendor/autoload.php';
-
 $exchange = new PesoExchange(new EuropeanCentralBankService());
-$converter = new Converter(new ISOCurrencies(), $exchange);
-
 $eur100 = Money::EUR(10000);
 
+$converter = new Converter(new ISOCurrencies(), $exchange);
+
 var_dump($converter->convert($eur100, new Currency('USD'))); // Money::USD(...)
+
+// or
+
+$converter = new PesoConverter(new ISOCurrencies(), $exchange);
+
+var_dump($converter->convert($eur100, new Currency('USD'))); // Money::USD(...)
+var_dump($converter->convertOnDate($eur100, new Currency('USD')), '2026-04-29'); // Money::USD(11706)
 ```
 
 ## Documentation
