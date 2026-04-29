@@ -2,8 +2,11 @@
 
 ## 1.x
 
-### next
+### 1.1.0
 
+*Apr 29, 2026*
+
+* PesoConverter as a wrapper for `Money\Converter`
 * Correctly handle invalid Services that return incorrect response objects
 
 ### 1.0.1
